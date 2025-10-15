@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <include file="$(find-pkg-share cpp_pubsub_srv)/launch/parrot_spy_launch.xml">
+    <arg name="listener_exec" value="adv_spy" />
+    <arg name="listener_node" value="adv_spy" />
+    <arg name="share_val" value="False" />
+  </include>
+  <node pkg="turtlesim" exec="turtlesim_node" name="turtlesim_node"/>
+  <node pkg="my_robot_controller" exec="draw_circle" name="draw_circle"/>
+</launch>
