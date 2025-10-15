@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="listener_exec" default="adv_spy" />
+  <arg name="listener_node" default="adv_spy" />
+  <arg name="share_val" default="True" />
+
+  <node pkg="cpp_pubsub_srv" exec="adv_parrot" name="adv_parrot"/>
+  <node pkg="cpp_pubsub_srv" exec="$(var listener_exec)" name="$(var listener_node)">
+    <param name="share_parameter" value="$(var share_val)" />
+  </node>
+</launch>
