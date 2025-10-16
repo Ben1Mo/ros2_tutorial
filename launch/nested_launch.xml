@@ -6,5 +6,4 @@
     <arg name="share_val" value="False" />
   </include>
   <node pkg="turtlesim" exec="turtlesim_node" name="turtlesim_node"/>
-  <node pkg="my_robot_controller" exec="draw_circle" name="draw_circle"/>
 </launch>

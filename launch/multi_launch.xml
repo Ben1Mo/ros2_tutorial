@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <node pkg="cpp_pubsub_srv" exec="adv_parrot" name="adv_parrot"/>
-  <node pkg="cpp_pubsub_srv" exec="adv_spy" name="adv_spy">
+  <node pkg="cpp_pubsub_srv" exec="adv_spy" name="adv_spy"/>
   <node pkg="turtlesim" exec="turtlesim_node" name="turtlesim_node"/>
-  <node pkg="my_robot_controller" exec="draw_circle" name="draw_circle"/>
 </launch>
