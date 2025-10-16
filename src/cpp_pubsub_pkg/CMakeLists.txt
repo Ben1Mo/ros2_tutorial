@@ -12,15 +12,24 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+
+# Include custom interfaces
 find_package(custom_interfaces REQUIRED)
 
+# Add talker executable and dependencies
 add_executable(parrot src/talker.cpp)
 ament_target_dependencies(parrot rclcpp std_msgs)
+
+# Add listener executable and dependencies
 add_executable(spy src/listener.cpp)
 ament_target_dependencies(spy rclcpp std_msgs)
 
+
+# Add custom_talker executable and dependencies
 add_executable(custom_parrot src/talker_custom.cpp)
 ament_target_dependencies(custom_parrot rclcpp custom_interfaces)
+
+# Add custom_listener executable and dependencies
 add_executable(custom_spy src/listener_custom.cpp)
 ament_target_dependencies(custom_spy rclcpp custom_interfaces)
 
